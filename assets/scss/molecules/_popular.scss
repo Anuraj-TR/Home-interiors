@@ -1,0 +1,176 @@
+.isl{
+    &-popular{
+        &-wrapper{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        .isl-block-h{
+            color: $color-main-text;
+        }
+        }
+        &__card-container{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-right: -$spacer-3;
+            margin-left: -$spacer-3;
+            padding-top: 20px;
+        }
+        &__card{
+            width: calc(25% - $spacer-5);
+            margin-right: $spacer-3;
+            margin-left: $spacer-3;
+            margin-bottom: $spacer-1;
+            &-top{
+                width: 100%;
+                height: 100%;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                }
+            }
+            &-bottom{
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                text-align: center;
+                .isl-text-b{
+                    color: $color-main-text;
+                }
+                &__social{
+                        width: 100%;
+                        padding: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content:center ;
+                        &-logo{
+                            width: 20px;
+                            height: 20px;
+                            margin-left: $spacer-2;
+                            margin-right: $spacer-2;
+                            cursor: pointer;
+                            svg{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+            }
+        }
+    }
+    &-btn{
+        display: inline-block;
+        padding: 10px 25px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        color: black;
+        font-size: 18px;
+        font-weight: 600;
+        &:hover{
+            color: inherit;
+        }
+        &--sub{
+            padding: 15px 80px;
+            position: relative;
+            &::after{
+                content: '>>>';
+                font-size: 20px;
+                position: absolute;
+                top: 15px;
+                left: 174px;
+                background-color: #fff;
+                transition: opacity 0.3s ease-in-out;
+            }
+        }
+    }
+
+    &-block-h{
+        display: block;
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+}
+
+@include mobile-tablet{
+    .isl{
+        &-popular{
+            &__card-container{
+                margin-right: -$spacer-1;
+                margin-left: -$spacer-1;
+                justify-content: flex-start;
+            }
+            &__card{
+                width: calc(50% - $spacer-2);
+                margin-right: $spacer-1;
+                margin-left: $spacer-1;
+                margin-bottom: $spacer-1;
+                &-top{
+                    width: 100%;
+                    height: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                &-bottom{
+                    width: 100%;
+                    height: 100%;
+                    padding: 20px;
+                    text-align: center;
+                    .isl-text-b{
+                        color: $color-main-text;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blog-cards{
+    .slick-dots{
+        bottom: -15px;
+    }
+    .isl-popular__card-bottom{
+        text-align: left;
+    }
+}
+
+@include mobile{
+    .isl{
+        &-popular{
+            &__card-container{
+                margin-right: -$spacer-1;
+                margin-left: -$spacer-1;
+                justify-content: flex-start;
+            }
+            &__card{
+                width: calc(50% - $spacer-2);
+                margin-right: $spacer-1;
+                margin-left: $spacer-1;
+                margin-bottom: $spacer-1;
+                &-top{
+                    width: 100%;
+                    height: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                &-bottom{
+                    width: 100%;
+                    height: 100%;
+                    padding: 20px;
+                    text-align: center;
+                    .isl-sub-h{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}

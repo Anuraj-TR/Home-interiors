@@ -1,0 +1,106 @@
+// @font-face {
+//   font-family: "MyWebFont";
+//   src: url("pathofyourfont.woff2") format("woff2"),
+//     url("pathofyourfont.woff") format("woff");
+//   font-style: normal;
+//   font-weight: normal;
+//   font-display: swap;
+// }
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-family: 'Jacques Francois', serif,ystem-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+  font-weight: $font-regular;
+  line-height: 1.3;
+  width: 100%;
+  min-height: 100%;
+  color: $color-black;
+  background-color: $color-white;
+}
+
+a,
+button,
+input {
+  outline: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+p,
+li {
+  margin-bottom: 0;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+*:focus {
+  outline: none;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1240px;
+  padding-left: $spacer-6;
+  padding-right: $spacer-6;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.desk-visible {
+  display: block;
+}
+
+.only-mobile {
+  display: none;
+}
+
+.hide-mobile-tablet {
+  display: block;
+}
+
+.only-mobile-tablet {
+  display: none;
+}
+
+@include mobile-tablet {
+  .content-wrapper {
+    padding-left: $spacer-5;
+    padding-right: $spacer-5;
+  }
+
+  .hide-mobile-tablet {
+    display: none;
+  }
+
+  .only-mobile-tablet {
+    display: block;
+  }
+}
+
+@include mobile {
+  .content-wrapper {
+    padding-left: $spacer-3;
+    padding-right: $spacer-3;
+  }
+
+  .desk-visible {
+    display: none;
+  }
+
+  .only-mobile {
+    display: block;
+  }
+}

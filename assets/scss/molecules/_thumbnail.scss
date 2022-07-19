@@ -1,0 +1,30 @@
+.thumbnail{
+    &-wrapper{
+    width: 100%;
+    max-width: 400px;
+    margin-right: -10px;
+    margin-left: -10px;
+    display: flex;
+    }
+    &__item{
+        width: calc(25% - 20px);
+        margin-right: 10px;
+        margin-left: 10px;
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        &-img{
+            width: 100%;
+            height: 100%;
+            &--active{
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+@include mobile{
+    .thumbnail-wrapper{
+        display: none;
+    }
+}

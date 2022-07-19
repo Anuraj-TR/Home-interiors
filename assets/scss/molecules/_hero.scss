@@ -1,0 +1,152 @@
+.main-bg{
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slick-dots{
+    bottom: 40px;
+    li{
+        width: 10px;
+        height: 10px;
+        border: 1px solid white;
+        border-radius: 20px;
+    }
+    .slick-active{
+        background-color: white;
+    }
+}
+
+.isl{
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    &-main-h{
+        width: 100%;
+        // height: 100%;
+        font-size: 60px;
+        font-weight: bold;
+        line-height: 1.3;
+        color: $color-main-text;
+        margin-bottom: 20px;
+    }
+    &-sub-h{
+        width: 100%;
+        height: 100%;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1.3;
+        color: $color-main-text;
+        margin-bottom: 10px;
+    }
+    &-text{
+        width: 100%;
+        color: inherit;
+    }
+    &-hero{
+        width: 100%;
+        height: 100%;
+        min-height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .isl-text{
+            width: 70%;
+        }
+        &--center{
+            width: 60%;
+            text-align: center;
+            margin: 0 auto;
+            .isl-text{
+                width: 100%;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+        &__content-container{
+            width: 100%;
+            padding: 70px 0;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.796);
+            .isl-sub-h, .isl-main-h, .isl-text{
+                color: black;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include mobile-tablet{
+    .isl-hero--center{
+            width: 100%;
+            text-align: center;
+            margin: 0;
+
+            .isl-text{
+                width: 100%;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+        .isl{
+            &-main-h{
+            font-size: 38px;
+        }
+        &-sub-h{
+            font-size: 24px;
+        }
+        &-text{
+            font-size: 18px;
+        }
+        }
+}
+
+
+@include mobile{
+    .main-bg,.isl,.isl-hero{
+        min-height: 600px;
+    }
+    .bg{
+        background-position-x: right;
+        min-height: 600px;
+    }
+
+    .isl{
+        &-main-h{
+            font-size: 30px;
+        }
+        &-sub-h{
+            font-size: 20px;
+        }
+        &-text{
+            font-size: 16px;
+        }
+        &-hero{
+            .isl-text{
+                width: 100%;
+            }
+            &--center{
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            .isl-text{
+                width: 100%;
+                text-align: center;
+                margin: 0 auto;
+                }
+            }
+            &__content-container{
+                padding: 30px 0;
+            }
+        }
+    }
+}

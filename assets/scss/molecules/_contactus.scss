@@ -1,0 +1,49 @@
+.isl-contact{
+    width: 100%;
+    &-form{
+        width: 100%;
+        &-control{
+            width: 100%;
+            max-width: 350px;
+            padding: 10px 20px;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            outline: none;
+            color: $color-main-text;
+            font-size: 18px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            &:focus{
+                border: none;
+                border-bottom: 2px solid #ccc;
+            }
+            &--error{
+                border: none;
+                border-bottom: 2px solid #ff0000;
+                color: #ff0000;
+            }
+        }
+        .int-button{
+            display: inline-block;
+            max-width: 300px;
+        }
+    }
+}
+
+
+
+@include mobile-tablet{
+    .isl-contact{
+        &-form{
+            &-control{
+                max-width: unset;
+            }
+        }
+    }
+}
+
+
+@include mobile{
+    .isl-contact{
+    }
+}

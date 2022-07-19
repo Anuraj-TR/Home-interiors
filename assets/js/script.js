@@ -40,7 +40,7 @@ $(".blog-cards").slick({
   dots: true,
   infinite: true,
   speed: 600,
-  slidesToShow: 5.6,
+  slidesToShow: 4.6,
   slidesToScroll: 1,
   autoplay: true,
   arrows: false,
@@ -48,7 +48,7 @@ $(".blog-cards").slick({
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 4.5,
+        slidesToShow: 3.5,
         slidesToScroll: 1,
         infinite: true,
         dots: true,
@@ -226,7 +226,28 @@ if (cards) {
 }
 
 
+const contactBtn = document.querySelector("#contact-btn");
+const contactInput = document.querySelectorAll(".isl-contact-form-control");
 
+
+contactInput.forEach((input) => { 
+  input.addEventListener("click", () => {
+    input.classList.remove("isl-contact-form-control--error");
+  });
+});
+
+
+contactBtn.addEventListener("click", (e) => { 
+  e.preventDefault();
+  contactInput.forEach((input, index) => { 
+    if (input.value == "") {
+      input.classList.add("isl-contact-form-control--error");
+    }
+    else {
+      input.classList.remove("isl-contact-form-control--error");
+    }
+  })
+})
 
 
 

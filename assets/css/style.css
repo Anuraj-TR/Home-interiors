@@ -1316,9 +1316,11 @@ button {
 }
 .testimonial__card-wrapper {
   width: 100%;
+  min-height: 500px;
+  overflow: hidden;
 }
 .testimonial__card-wrapper .slick-dots {
-  bottom: -100px;
+  bottom: 20px;
 }
 .testimonial__card-wrapper .slick-list {
   overflow: visible;
@@ -1346,6 +1348,9 @@ button {
 }
 
 @media (max-width: 1024px) {
+  .testimonial-wrapper .isl-text {
+    max-width: unset;
+  }
   .testimonial__card-content {
     padding: 15px 10px;
     width: 90%;
@@ -1354,16 +1359,51 @@ button {
 @media (max-width: 767px) {
   .testimonial {
     margin: 0;
+    min-height: 300px;
   }
   .testimonial__card-wrapper {
-    overflow-x: hidden;
-  }
-  .testimonial__card-wrapper::-webkit-scrollbar {
-    display: none;
+    min-height: 420px;
   }
   .testimonial__card-content {
     padding: 15px 10px;
     width: 90%;
+  }
+}
+.isl-contact {
+  width: 100%;
+}
+.isl-contact-form {
+  width: 100%;
+}
+.isl-contact-form-control {
+  width: 100%;
+  max-width: 350px;
+  padding: 10px 20px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  color: #241330;
+  font-size: 18px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.isl-contact-form-control:focus {
+  border: none;
+  border-bottom: 2px solid #ccc;
+}
+.isl-contact-form-control--error {
+  border: none;
+  border-bottom: 2px solid #ff0000;
+  color: #ff0000;
+}
+.isl-contact-form .int-button {
+  display: inline-block;
+  max-width: 300px;
+}
+
+@media (max-width: 1024px) {
+  .isl-contact-form-control {
+    max-width: unset;
   }
 }
 .isl-header__nav-wrapper {

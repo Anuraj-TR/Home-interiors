@@ -10,9 +10,10 @@
     }
     &__card-wrapper{
         width: 100%;
-
+        min-height: 500px;
+        overflow: hidden;
         .slick-dots {
-            bottom: -100px;
+            bottom: 20px;
         }
         .slick-list{
             overflow: visible;
@@ -51,6 +52,11 @@
 
 @include mobile-tablet{
     .testimonial{
+        &-wrapper{
+        .isl-text{
+            max-width: unset;
+        }
+    }
         // margin: 0;
         &__card-content{
             padding: 15px 10px;
@@ -62,11 +68,9 @@
     .testimonial{
         
     margin: 0;
+    min-height: 300px;
     &__card-wrapper{
-        overflow-x: hidden;
-        &::-webkit-scrollbar{
-            display: none;
-        }
+        min-height: 420px;
     }
         &__card-content{
             padding: 15px 10px;

@@ -490,7 +490,7 @@ button {
 .isl-about__left__content-block-content {
   width: 100%;
   height: 100%;
-  min-height: 675px;
+  min-height: 610px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -498,12 +498,15 @@ button {
 }
 .isl-about__left__content-block-content--content75 {
   min-height: 380px;
+  width: 100%;
 }
 .isl-about__left__content-block-content--content50 {
-  min-height: 330px;
+  min-height: 300px;
+  width: 100%;
 }
 .isl-about__left__content-block-content--content25 {
-  min-height: 195px;
+  min-height: 140px;
+  width: 100%;
 }
 .isl-about__right {
   width: 50%;
@@ -602,6 +605,21 @@ button {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  .isl-about__left__content-block-content {
+    min-height: 378px;
+  }
+  .isl-about__left__content-block-content--content75 {
+    min-height: 380px;
+    width: 100%;
+  }
+  .isl-about__left__content-block-content--content50 {
+    min-height: 185px;
+    width: 100%;
+  }
+  .isl-about__left__content-block-content--content25 {
+    min-height: 140px;
+    width: 100%;
   }
   .isl-about__right {
     width: 100%;
@@ -1401,5 +1419,43 @@ button {
   .isl-header__nav--active {
     left: 0;
     opacity: 1;
+  }
+}
+.isl-products-wrapper {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.isl-products__content-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.isl-products__text-content {
+  width: 100%;
+}
+.isl-products__text-content .isl-text {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.isl-products__text-content .int-button {
+  max-width: 200px;
+}
+
+@media (max-width: 767px) {
+  .isl-products__content-wrapper .isl-about__left__content-block-content {
+    min-height: 165px;
+  }
+  .isl-products__content-wrapper .isl-about__left__content-block-content--content75 {
+    min-height: 380px;
+  }
+  .isl-products__content-wrapper .isl-about__left__content-block-content--content50 {
+    min-height: 78px;
+  }
+  .isl-products__content-wrapper .isl-about__left__content-block-content--content25 {
+    min-height: 85px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,44 @@
+.isl-products{
+    &-wrapper{
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    &__content-wrapper{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__text-content{
+        width: 100%;
+        .isl-text{
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .int-button{
+            max-width: 200px ;
+        }
+    }
+}
+
+@include mobile{
+    .isl-products{
+        &__content-wrapper{
+            .isl-about__left__content-block-content{
+                min-height: 165px;
+                &--content75{
+                    min-height: 380px;
+                }
+                &--content50{
+                    min-height: 78px;
+                }
+                &--content25{
+                    min-height: 85px;
+                }
+            }
+        }
+    }
+}

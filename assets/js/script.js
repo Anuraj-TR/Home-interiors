@@ -237,17 +237,20 @@ contactInput.forEach((input) => {
 });
 
 
-contactBtn.addEventListener("click", (e) => { 
-  e.preventDefault();
-  contactInput.forEach((input, index) => { 
-    if (input.value == "") {
-      input.classList.add("isl-contact-form-control--error");
-    }
-    else {
-      input.classList.remove("isl-contact-form-control--error");
-    }
+if (contactBtn) {
+
+  contactBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    contactInput.forEach((input, index) => {
+      if (input.value == "") {
+        input.classList.add("isl-contact-form-control--error");
+      }
+      else {
+        input.classList.remove("isl-contact-form-control--error");
+      }
+    })
   })
-})
 
 
 
+}

@@ -226,7 +226,7 @@ if (cards) {
 }
 
 
-const contactBtn = document.querySelector("#contact-btn");
+const contactForm = document.querySelector(".isl-contact-form");
 const contactInput = document.querySelectorAll(".isl-contact-form-control");
 
 
@@ -237,9 +237,9 @@ contactInput.forEach((input) => {
 });
 
 
-if (contactBtn) {
+if (contactForm) {
 
-  contactBtn.addEventListener("click", (e) => {
+  contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
     contactInput.forEach((input, index) => {
       if (input.value == "") {
